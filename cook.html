@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Cook</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <!-- Font Awesome-->
+    <script src="https://kit.fontawesome.com/41953ab97d.js" crossorigin="anonymous"></script>
+    <!-- bootstrap social -->
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <header class='jumbotron jumbotron-fluid'>
+        <nav class='navbar navbar-expand-sm navbar-dark sticky-top'>
+            <div class="container">
+                <a class='navbar-brand' href='#'><img src='img/logo.png' class='navbar-logo'>
+                </a>
+                <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#home-nav'>
+                    <span class='navbar-togler-icon'>
+                    </span>
+                </button>
+                <div class='navbar-collapse collapse' id='home-nav'>
+                    <ul class='navbar-nav'>
+                        <li class='nav-item'><a href="index.html" class='nav-link'><i></i>Home</a></li>
+                        <li class='nav-item'><a href="#about" class='nav-link'><i></i>About</a></li>
+                        <li class='nav-item active'><a href="allcooks.html" class='nav-link'><i></i>Cooks</a></li>
+                        <li class='nav-item'><a href="#become-cook" class='nav-link'><i></i>Become a cook</a></li>
+                    </ul>
+                    <span class='navbar-text ml-auto'><a data-target='#loginModal' role='button' data-toggle='modal'><i class='fa fa-sign-in'></i> Login</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+</header>
+<div id='loginModal' class='modal fade' role='dialog'>
+    <div class="modal-dialog" role='document'>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class='modal-title'>Login
+                </h3>
+                <button type='button' class='close' data-dismiss='modal'>&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form action="">
+                            <div class="form-group">
+                                <label class="sr-only" for="inputEmail">Email address</label>
+                                <input type="email" class="form-control form-control-sm" id="inputEmail" placeholder="Enter email address">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="inputPassword">Password</label>
+                                <input type="text" class="form-control form-control-sm" id="inputPassword" placeholder="Enter Password">
+                            </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Log in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class='chef-bio'>
+    <div class="container">
+        <div class="row">
+            <div class="media col-sm-4">
+                <img src="img/chef2.jpg" alt="">
+                <div class="media-body">
+                    <h3 class='cook-name'>Cook Name</h3>
+                    <p class='card-text cuisine-name checked'>Thai</p>
+                    <div class="cook-rating">
+                        <i class="fas fa-star cook-star checked"></i>
+                        <i class="fas fa-star cook-star checked"></i>
+                        <i class="fas fa-star cook-star checked"></i>
+                        <i class="fas fa-star cook-star checked"></i>
+                        <i class="fas fa-star cook-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>
+<section class='cook-menu'>
+    <div class="container">
+        <div class="row cook-items">
+            <div class="media">
+                <img src="img/chef6.jpg" alt="">
+                <div class="media-body">
+                    <h3>Food Item 1</h3>
+                    <p>Serving size</p>
+                    <div class="spice-rating">
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
+                    <p>Food item description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="review">
+    <div class="container">
+        <div class="row">
+            <h3>
+                Customer Feedback
+            </h3>
+        </div>
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">
+                            Review Title 1
+                        </div>
+                        <div class="card-subtitle muted">
+                            Reviewer 1
+                        </div>
+                        <div class="card-text">
+                            Review Text 1
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">
+                            Review Title 2
+                        </div>
+                        <div class="card-subtitle muted">
+                            Reviewer 2
+                        </div>
+                        <div class="card-text">
+                            Review Text 2
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div>this is footer with logo</div>
+        <div class='social'>social links and icons</div>
+        <div>Contact Section</div>
+    </div>
+</footer>
+<!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script scr='js/script.js'></script>
+</body>
+</html>

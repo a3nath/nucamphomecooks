@@ -1,0 +1,56 @@
+.header-main{
+    height:100vh;
+    position:relative;
+}
+
+.header-main::before{
+    background-image: url('/img/cover.jpg');
+    background-size:cover;
+    filter: blur(3px);
+    height:100vh;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    content:"";
+    
+}
+
+.search-cook{
+    position: absolute;
+    bottom: 0;
+}
+
+.search-form{
+    width:40%;
+    background-color:#fff;
+}
+
+.cook-form{
+    width:40%;
+}
+
+.cook-img{
+    width:100%;
+}
+
+.cook-star{
+    color:grey;
+}
+
+.cook-star.checked{
+    color:yellow;
+}
+
+.carousel {
+    border: solid green; }
+
+.carousel-indicators li{
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+}
+
+.spice-rating>i{
+    color:firebrick;
+}
