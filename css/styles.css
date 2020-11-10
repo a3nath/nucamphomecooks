@@ -177,9 +177,10 @@ img{margin:0px;}
     background-color: white;
 }
 
-.allcooks-cook-card{
+.cook-cat > .allcooks-cook-card{
     background-color:#d1cddc;
     width: 29.74%;
+    flex: 0 0 auto;
 }
 
 .section-choose-cooks{
