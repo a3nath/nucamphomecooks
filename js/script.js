@@ -1,6 +1,6 @@
 const menu = {}
-menu.$checkbox = $('input[type="checkbox"]');
-menu.$cookCat = $('cook-cat');
+menu.$checkbox = $("input[type='checkbox']");
+menu.$cookCat = $('.cook-cat');
 
 menu.cooks = 
 [
@@ -8,37 +8,42 @@ menu.cooks =
     cookNum:1,
     cuisine: "Mexican",
     rating:3.5,
-    cookImg: "img1.jpg",
+    cookImg: "chef1.jpg",
     foodImg1: "food11.jpg",
-    foodImg2: "food12.jpg"
+    foodImg2: "food12.jpg",
+    page:"cook1.html"
     },
     {cookName: "N'golo Kante",
     cookNum:2,
     cuisine:   "Ethopian",
     rating:4.8,
-    cookImg: "img2.jpg",
+    cookImg: "chef2.jpg",
     foodImg1: "food21.jpg",
-    foodImg2:"food22.jpg"
+    foodImg2:"food22.jpg",
+    page:"cook2.html"
     },
-    {cookName: "Cesar Azpilicuetta",
+    {cookName: "Ji So-yun",
     cookNum:3,
     cuisine: "Pakistani",
     rating:5,
-    cookImg: "img3.jpg",
+    cookImg: "chef3.jpg",
     foodImg1: "food31.jpg",
-    foodImg2: "food32.jpg"
+    foodImg2: "food32.jpg",
+    page:"cook3.html"
     },
-    {cookName: "Frank Lampard",
+    {cookName: "Magdalena Eriksson",
     cookNum:4,
     cuisine: "Thai",
     rating:4.2,
-    cookImg: "img4.jpg",
+    cookImg: "chef4.jpg",
     foodImg1: "food41.jpg",
-    foodImg2: "food42.jpg"
+    foodImg2: "food42.jpg",
+    page:"cook4.html"
     }
 ]
 
 menu.cookAppend = function(filterCook){
+    console.log("dda")
     menu.$cookCat.append(filterCook.map(function(cook){
         return `<div class="card">
         <div class="carousel slide" data-ride='carousel' id='carouselcook${cook.cookNum}'>
@@ -63,14 +68,13 @@ menu.cookAppend = function(filterCook){
             <h5 class='card-title cook-name'>${cook.cookName}</h5>
             <p class='card-text cuisine-name checked'>${cook.cuisine}</p>
             <p>Rating: ${cook.rating}/5</p>
-            <a class='stretched-link' href='cook.html'></a>
+            <a class='stretched-link' href='${cook.page}'></a>
         </div>
     </div>`
-
     }))
 };
 
-menu.cookFilter = () => {
+menu.cookFilter = function() {
     let filterVal;
     let filterMenu;
     if($(this).prop("checked")===true) {
@@ -87,12 +91,13 @@ menu.cookFilter = () => {
 }
 
 menu.init = function(){
-    menu.$checkbox(on, 'click', menu.cookFilter);
+    menu.$checkbox.on('click', menu.cookFilter);
 }
 
 $(document).ready(function() {
+    console.log("scriptload")
     menu.init();
-}
+});
 
 
 
